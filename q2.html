@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .custom-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #2f2f2f;
+            border-radius: 4px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .custom-checkbox:checked {
+            background-color: #008002;
+            border-color: #008002;
+        }
+
+        .custom-checkbox:checked::after {
+            content: "×";
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+        }
+
+        .checkbox-label {
+            cursor: pointer;
+        }
+
+        .custom-checkbox:checked+.checkbox-label {
+            color: #008002;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" class="custom-checkbox">
+        <label class="checkbox-label">Complete the task</label>
+    </div>
+
+</body>
+
+</html>
